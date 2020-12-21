@@ -1,0 +1,47 @@
+﻿-Types:
+	-Tietel: 
+		-type: string
+		-regex: .+
+	-Skrywer:
+		-type: string
+		-regex: .+
+	-OuderdomsGroep:
+		-type: enum
+		-values:
+			-Kleuter
+			-Tiener
+	-Genre:
+		-type: enum
+		-values:
+			-Fiksie
+			-Nie_fiksie
+	-BoekNommer:
+		-Jaar:
+			type: string
+			regex: '\d{2}'
+			generate: DateTime.Now.Year.ToString().Substring(2)
+		-Nommer:
+			type: int
+			generate: '{Max} + 1'
+	-Dewey:
+		-type: string
+		-regex: '^\d{3}(.\d{3})$'
+	-Taal:
+		-type: enum
+		-values:
+			-Afrikaans
+			-English
+	-BoekStatus:
+		-type: enum
+		-values:
+			-In_versameling
+			-Nie_in_versameling
+	-BoekInfo:
+		-Tietel: _Tietel
+		-Skrywer: _Skrywer
+		-Ouderdoms_groep: _OuderdomsGroep
+		-Genre: _Genre
+		-BoekNommer: _BoekNommer
+		-Dewey: _Dewey
+		-Taal: _Taal
+		-Status: _BoekStatus

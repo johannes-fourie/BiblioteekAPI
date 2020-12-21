@@ -1,0 +1,6 @@
+﻿-UIPage:
+	-title: Katalogus
+	-actions: 
+		-create
+		-edit
+		-delete
